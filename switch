@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main() 
+{
+    char operator;
+    double num1, num2;
+	//ask user to enter the operator
+    printf("Select the operator (+, -, *, /): ");
+    scanf("%c", &operator);
+    
+    //ask user to enter two numbers
+    printf("Enter two numbers (eg. 12 3): ");
+    scanf("%lf %lf",&num1, &num2);
+	
+	//start switch case
+    switch(operator)
+    {	//if operator is addition
+        case '+':
+            printf("%.1lf + %.1lf = %.1lf",num1, num2, num1+num2);
+            break;
+
+		// if operator is substraction
+        case '-':
+            printf("%.1lf - %.1lf = %.1lf",num1, num2, num1-num2);
+            break;
+            
+		//if operator is multiplication
+        case '*':
+            printf("%.1lf * %.1lf = %.1lf",num1, num2, num1*num2);
+            break;
+	
+		//if operator is division
+        case '/':
+            printf("%.1lf / %.1lf = %.1lf",num1, num2, num1/num2);
+            break;
+
+        // if user enter a wrong operaotr
+        default:
+            printf("Please select the correct operator");
+    }
+
+    return 0;
+}
